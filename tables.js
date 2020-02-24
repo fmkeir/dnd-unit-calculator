@@ -7,7 +7,7 @@ module.exports = {
     dragonborn: {attack: 2, power: 2, defense: 1, toughness: 1, morale: 1,
       traits: ["courageous"]
     },
-    Ddarf: {attack: 3, power: 1, defense: 1, toughness: 1, morale: 2,
+    Dwarf: {attack: 3, power: 1, defense: 1, toughness: 1, morale: 2,
       traits: ["stalwart"]
     },
     elf: {attack: 2, power: 0, defense: 0, toughness: 0, morale: 1,

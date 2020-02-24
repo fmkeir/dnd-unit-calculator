@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <form action="index.html" method="post" id="unitForm">
+      <label for="race">Race:</label>
+        <select class="" name="race">
+          <option value="bugbear">Bugbear</option>
+          <option value="dragonborn">Dragonborn</option>
+          <option value="dwarf">Dwarf</option>
+          <option value="elf">elf</option>
+          <option value="winged elf">winged elf</option>
+          <option value="ghoul">Ghoul</option>
+          <option value="gnoll">Gnoll</option>
+          <option value="gnome">Gnome</option>
+          <option value="goblin">Goblin</option>
+          <option value="hobgoblin">Hobgoblin</option>
+          <option value="human">Human</option>
+          <option value="kobold">Kobold</option>
+          <option value="lizardfolk">Lizardfolk</option>
+          <option value="ogre">Ogre</option>
+          <option value="orc">Orc</option>
+          <option value="skeleton">Skeleton</option>
+          <option value="treant">Treant</option>
+          <option value="troll">Troll</option>
+          <option value="zombie">Zombie</option>
+        </select>
+      <label for="experience">Experience:</label>
+        <select class="" name="experience">
+          <option value="green">Green</option>
+          <option value="regular">Regular</option>
+          <option value="seasoned">Seasoned</option>
+          <option value="veteran">Veteran</option>
+          <option value="elite">Elite</option>
+          <option value="super elite">Super Elite</option>
+        </select>
+      <label for="equipment">Equipment:</label>
+        <select class="" name="equipment">
+          <option value="light">Light</option>
+          <option value="medium">Medium</option>
+          <option value="heavy">Heavy</option>
+          <option value="super heavy">Super Heavy</option>
+        </select>
+      <label for="unitType">Unit Type:</label>
+        <select class="" name="unitType">
+          <option value="airborne">Airborne</option>
+          <option value="archers">Archers</option>
+          <option value="cavalry">Cavalry</option>
+          <option value="levies">Levies</option>
+          <option value="infantry">Infantry</option>
+          <option value="siege engine">Siege Engine</option>
+        </select>
+      <label for="unitSize">Unit Size:</label>
+        <select class="" name="unitSize">
+          <option value="d4">1d4</option>
+          <option value="d6">1d6</option>
+          <option value="d8">1d8</option>
+          <option value="d10">1d10</option>
+          <option value="d12">1d12</option>
+        </select>
+
+      <input type="submit" id="submit" value="Add Unit">
+      <input type="submit" id="deleteAll" value="Delete All">
+    </form>
+    <ul id="unitList"></ul>
+  </body>
+</html>
