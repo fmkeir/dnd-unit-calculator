@@ -1,4 +1,3 @@
-
 const races = {
   bugbear: {
     attack: 2, power: 0, defense: 0, toughness: 0, morale: 1,
