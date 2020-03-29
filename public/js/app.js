@@ -203,10 +203,15 @@ const calculateCost = function (unit){
    return result;
 };
 
-const sumModifier = function (trait, components) {
-  return components.reduce((sum, component) => sum += component[trait], 0);
+const sumModifier = function (stat, components) {
+  return components.reduce((sum, component) => sum += component[stat], 0);
 };
 
 const sumTraitValues = function(traitsArray){
-  return traitsArray.reduce((sum, trait) => sum += traits[trait]["cost"], 0)
+  return traitsArray.reduce((sum, trait) => {
+    if (!traits.hasOwnProperty(trait)) {
+      traits[trait] = {cost: 0};
+    }
+    return sum += traits[trait]["cost"]
+  }, 0)
 }
