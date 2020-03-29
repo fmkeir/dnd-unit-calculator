@@ -159,7 +159,8 @@ const handleFormSubmit = (input, list) => {
   generateElement(newListItem, 'h2',
     `Attack: ${newUnit.attack} Power: ${newUnit.power} Defense: ${newUnit.defense} Toughness: ${newUnit.toughness} Morale: ${newUnit.morale}`
   )
-  generateElement(newListItem, 'h2', `Traits: ${newUnit.traits}`)
+  const formattedTraits = newUnit.traits.join(", ")
+  generateElement(newListItem, 'h2', `Traits: ${formattedTraits}`)
   generateElement(newListItem,'h3', `${unitCost.toFixed(2)} gp`);
 
   newUnit.traits.forEach(trait => {
