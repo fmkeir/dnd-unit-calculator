@@ -6,7 +6,7 @@ const races = {
   dragonborn: {attack: 2, power: 2, defense: 1, toughness: 1, morale: 1,
     traits: ["courageous"]
   },
-  Dwarf: {attack: 3, power: 1, defense: 1, toughness: 1, morale: 2,
+  dwarf: {attack: 3, power: 1, defense: 1, toughness: 1, morale: 2,
     traits: ["stalwart"]
   },
   elf: {attack: 2, power: 0, defense: 0, toughness: 0, morale: 1,
@@ -157,8 +157,9 @@ const handleFormSubmit = (input, list) => {
 
   generateElement(newListItem, 'h2', newUnit.name);
   generateElement(newListItem, 'h2',
-    `Attack: ${newUnit.attack} Power: ${newUnit.power} Defense: ${newUnit.defense} Toughness: ${newUnit.toughness} Morale: ${newUnit.morale} Traits: ${newUnit.traits}`
+    `Attack: ${newUnit.attack} Power: ${newUnit.power} Defense: ${newUnit.defense} Toughness: ${newUnit.toughness} Morale: ${newUnit.morale}`
   )
+  generateElement(newListItem, 'h2', `Traits: ${newUnit.traits}`)
   generateElement(newListItem,'h3', `${unitCost.toFixed(2)} gp`);
 
   newUnit.traits.forEach(trait => {
