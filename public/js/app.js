@@ -160,6 +160,17 @@ const handleFormSubmit = (input, list) => {
     `Attack: ${newUnit.attack} Power: ${newUnit.power} Defense: ${newUnit.defense} Toughness: ${newUnit.toughness} Morale: ${newUnit.morale} Traits: ${newUnit.traits}`
   )
   generateElement(newListItem,'h3', `${unitCost.toFixed(2)} gp`);
+
+  newUnit.traits.forEach(trait => {
+    if (traits[trait].hasOwnProperty('warning')) {
+      generateElement(newListItem,'h4', `${trait}: ${traits[trait]["warning"]}`)
+    }
+  });
+
+
+  if ('warning' in newUnit.traits) {
+    generateElement(newListItem,'h4', newUnit[traits][warning])
+  }
 };
 
 const generateElement = (container, tag, content='') => {
@@ -210,7 +221,7 @@ const sumModifier = function (stat, components) {
 const sumTraitValues = function(traitsArray){
   return traitsArray.reduce((sum, trait) => {
     if (!traits.hasOwnProperty(trait)) {
-      traits[trait] = {cost: 0};
+      traits[trait] = {cost: 0, warning: "does not have a listed cost"};
     }
     return sum += traits[trait]["cost"]
   }, 0)
