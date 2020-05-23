@@ -2,21 +2,19 @@
 
 [This project is hosted on Heroku](https://dnd-snf-calc.herokuapp.com/)
 
-This app was is designed to simplify the creation of units using Matt Colville's Strongholds and Followers sourcebook. It was created after a long session where the calculations were laborious and slowing gameplay.
+This app was is designed to simplify the creation of units using Matt Colville's Strongholds and Followers sourcebook. It was created after a long D&D session, where this process was slowing gameplay.
 
 The project was built in a single sitting of ~3 hours, with later styling to make it easier to use. 
 
 It is now used regularly in our games.
 
 <img src="./readme_images/desktop.png" width="700" alt="Desktop view with a single unit created" />
--
 
 The app is comprised of multiple drop-down menus containing properties which describe each unit. These properties are used to calculate the game statistics and cost of a unit. Once a unit has been calculated and displayed, it is added in a list view. This allows multiple units to be easily compared, and decisions made.
 
 The dataset used in the published version of the book is incomplete; the racial traits are not all given a gold value. These traits are given a value of 0 gp and raised in red, so that the players can make a decision during the game.
 
 <img src="./readme_images/desktop_with_error.png" width="700" alt="Desktop view, single unit with an error: frenzy does not have a listed cost" />
--
 
 Since most games take place in person, using pen and paper, it was important that the app looked good and worked on mobile. A CSS media query was used to control the mobile view styling.
 
@@ -31,7 +29,7 @@ Since most games take place in person, using pen and paper, it was important tha
 The app is written in JavaScript. Once you download the project, you can open the index.html in the browser and you're ready to go!
 
 ### Unit Creation
-Each selected property of a unit has game stats associated with it. These are reduced using `sumModifer()` to get the total value of each stat. The traits are pulled directly from the race traits. `typeMulti` is a multiplier used in the cost calculation and is tied to the stats of a unit.
+Each selected property of a unit has game stats associated with it. `sumModifier()` uses the reduce enumerator on the array `components`, to get the total value of the stats provided from each property. The `traits` are pulled directly from the race `traits`. `typeMulti` is a multiplier used in the cost calculation and is tied to the `unitSize` and `unitType`.
 
 ```javascript
   unit = {
