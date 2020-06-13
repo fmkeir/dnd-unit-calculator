@@ -1,6 +1,6 @@
 ## D&D - Strongholds and Followers unit cost calculator
 
-[This project is hosted on Heroku](https://dnd-snf-calc.herokuapp.com/)
+[See the live project](https://dnd-snf-units.fraserkeir.com/)
 
 This app was is designed to simplify the creation of units using Matt Colville's Strongholds and Followers sourcebook. It was created after a long D&D session, where this process was slowing gameplay.
 
